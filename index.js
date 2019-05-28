@@ -24,6 +24,7 @@ const job = new CronJob({
       const browser = await puppeteer.launch({
         args: ['--no-sandbox', '--disable-setuid-sandbox', '--headless', '--disable-gpu'],
         executablePath: '/usr/bin/chromium-browser'
+        // executablePath: '/Applications/Chromium.app/Contents/MacOS/Chromium'
       })
       const page = await browser.newPage();
       await page.setViewport({
